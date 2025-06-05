@@ -37,7 +37,7 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
 
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
-  res.render("author_form", { title: "Create Author" });
+  res.render("author_form", { title: "新しい著者を作成" });
 };
 
 // Handle Author create on POST.

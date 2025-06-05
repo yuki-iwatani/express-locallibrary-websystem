@@ -1,17 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Mozilla Developer Network のチュートリアルとして作られた、非常にシンプルな Express ウェブサイト #[em LocalLibrary]へようこそ。
+  h1(style="color: blue")= title
+  body(style="background-color: #f0f8ff")
+  p Mozilla Developer Network のチュートリアルとして作られたExpress ウェブサイト #[em LocalLibrary]へようこそ。
 
-  h1 動的コンテンツ
+  h1(style="color: green") コンテンツ
 
   p 図書館に登録されているレコード数は次の通りです:
 
 
   ul
-    li #[strong 本:] !{book_count}
-    li #[strong 部数:] !{book_instance_count}
-    li #[strong 利用可能な部数:] !{book_instance_available_count}
-    li #[strong 著者:] !{author_count}
-    li #[strong ジャンル:] !{genre_count}
+    li #[strong(style="color: red") 本:] !{book_count}
+    li #[strong(style="color: red") 部数:] !{book_instance_count}
+    li #[strong(style="color: red") 利用可能な部数:] !{book_instance_available_count}
+    li #[strong(style="color: red") 著者:] !{author_count}
+    li #[strong(style="color: red") ジャンル:] !{genre_count}

@@ -23,7 +23,7 @@ exports.index = asyncHandler(async (req, res, next) => {
   ]);
 
   res.render("index", {
-    title: "ローカル図書館のホーム",
+    title: "図書館のホーム",
     book_count: numBooks,
     book_instance_count: numBookInstances,
     book_instance_available_count: numAvailableBookInstances,
@@ -39,7 +39,7 @@ exports.book_list = asyncHandler(async (req, res, next) => {
     .populate("author")
     .exec();
 
-  res.render("book_list", { title: "Book List", book_list: allBooks });
+  res.render("book_list", { title: "全ての書籍", book_list: allBooks });
 });
 
 // Display detail page for a specific book.
@@ -73,7 +73,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
   ]);
 
   res.render("book_form", {
-    title: "Create Book",
+    title: "新しい本を作成",
     authors: allAuthors,
     genres: allGenres,
   });
@@ -136,7 +136,7 @@ exports.book_create_post = [
         }
       }
       res.render("book_form", {
-        title: "Create Book",
+        title: "新しい本を作成",
         authors: allAuthors,
         genres: allGenres,
         book: book,
